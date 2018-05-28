@@ -77,7 +77,7 @@ final class LorannBDDConnector {
         }
         return false;
     }
-
+    
     /**
      * Execute query.
      *
