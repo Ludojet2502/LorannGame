@@ -17,7 +17,7 @@ import model.Element;
 public abstract class ElementDAO extends AbstractDAO {
 
     /** The sql Element by id. */
-    private static String sqlElementByPos  = "{call findElementByPos(?)}";
+    private static String sqlElementByPos  = "{call findElementByPos(?, ?)}";
 
     /** The sql Element by type. */
     private static String sqlElementByType = "{call findElementByType(?)}";
@@ -72,7 +72,6 @@ public abstract class ElementDAO extends AbstractDAO {
     public static Element getElementByType(final char type) throws SQLException {
         final CallableStatement callStatement = prepareCall(sqlElementByType);
         Element Element = null;
-
         callStatement.setString(1, Character.toString(type));
         if (callStatement.execute()) {
             final ResultSet result = callStatement.getResultSet();

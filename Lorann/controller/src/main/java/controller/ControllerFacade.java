@@ -3,6 +3,7 @@ package controller;
 import java.sql.SQLException;
 import java.util.List;
 
+import fr.exia.insanevehicles.Cle;
 import model.Element;
 import model.IModel;
 import view.IView;
@@ -44,7 +45,7 @@ public class ControllerFacade implements IController {
     public void start() throws SQLException {
         this.getView().displayMessage(this.getModel().getElementByPos(1, 1).toString());
 
-        this.getView().displayMessage(this.getModel().getElementByType(' ').toString());
+        this.getView().displayMessage(this.getModel().getElementByType('g').toString());
 
         final List<Element> Elements = this.getModel().getAllElements();
         final StringBuilder message = new StringBuilder();
@@ -52,7 +53,27 @@ public class ControllerFacade implements IController {
             message.append(Element);
             message.append('\n');
         }
-        this.getView().displayMessage(message.toString());
+        while (alive) {
+        	this.getView().displayMessage(message.toString());
+        	KeyCode.key=0;
+        	if (KeyCode.key != 0) {
+        		switch (KeyCode.key) {
+        		case 39:
+        			this.lorann().moveRight();
+        			break;
+        		case 37:
+        			this.lorann().moveLeft();
+        			break;
+        		case 38:
+        			this.lorann().moveUp();
+        			break;
+        		case 40:
+        			this.lorann().moveDown();
+        			break;
+        		}
+        	}
+        }
+        
     }
 
     /**
