@@ -20,7 +20,7 @@ public class ControllerFacade implements IController {
     /** The model. */
     private final IModel model;
     
-    public lorann = new Lorran
+    private Lorann Lorran;
 
     /**
      * Instantiates a new controller facade.
