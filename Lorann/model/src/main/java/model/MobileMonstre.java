@@ -1,7 +1,8 @@
 package model;
 
 public class MobileMonstre extends Object{
-	 public void moveRight() {
+	 
+	public void moveRight() {
 	        this.setX(this.getX() + 1);
 	 }
 	 public void moveLeft() {

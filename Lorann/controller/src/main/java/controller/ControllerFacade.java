@@ -2,8 +2,6 @@ package controller;
 
 import java.sql.SQLException;
 import java.util.List;
-
-import fr.exia.insanevehicles.Cle;
 import model.Element;
 import model.IModel;
 import view.IView;
@@ -21,6 +19,8 @@ public class ControllerFacade implements IController {
 
     /** The model. */
     private final IModel model;
+    
+    public lorann = new Lorran
 
     /**
      * Instantiates a new controller facade.
@@ -59,16 +59,16 @@ public class ControllerFacade implements IController {
         	if (KeyCode.key != 0) {
         		switch (KeyCode.key) {
         		case 39:
-        			this.lorann().moveRight();
+        			Lorann.moveRight();
         			break;
         		case 37:
-        			this.lorann().moveLeft();
+        			Lorann.moveLeft();
         			break;
         		case 38:
-        			this.lorann().moveUp();
+        			Lorann.moveUp();
         			break;
         		case 40:
-        			this.lorann().moveDown();
+        			Lorann.moveDown();
         			break;
         		}
         	}
