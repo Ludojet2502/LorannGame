@@ -1,5 +1,5 @@
 package model;
 
-public class Demon {
+public class Mur {
 
 }
