@@ -1,3 +1,4 @@
+// Hello world - Matthieu C.
 package main;
 
 import java.sql.SQLException;
