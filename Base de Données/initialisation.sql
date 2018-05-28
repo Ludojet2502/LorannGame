@@ -1,12 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
---
--- Client :  127.0.0.1
--- Généré le :  Lun 12 Juin 2017 à 20:25
--- Version du serveur :  5.7.14
--- Version de PHP :  5.6.25
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -24,62 +15,52 @@ DELIMITER $$
 --
 -- Procédures
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `findAllExamples` ()  NO SQL
-SELECT id, name
-FROM example$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `findAllElements` (IN `ctable` CHAR(255))  NO SQL
+SELECT x, y, `type`
+FROM ctable$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `findExampleById` (IN `id` INT)  NO SQL
-SELECT id, name
-FROM example
-WHERE example.id = id$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `findElementByPos` (IN `ctable` CHAR(255), IN `x` INT, IN `y` INT)  NO SQL
+SELECT x, y, `type`
+FROM ctable
+WHERE ctable.x = x
+AND ctable.y = y$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `findExampleByName` (IN `name` VARCHAR(255))  NO SQL
-SELECT id, name
-FROM example
-WHERE example.name = name$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `findElementByType` (IN `ctable` CHAR(255), IN `type` CHAR(1))  NO SQL
+SELECT x, y, `type`
+FROM ctable
+WHERE ctable.`type` = type$$
 
 DELIMITER ;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `example`
+-- Structure de la table `level_0`
 --
 
-CREATE TABLE `example` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `level_0` (
+  `x` int(8) NOT NULL,
+  `y` int(8) NOT NULL,
+  `type` char(1) NOT NULL
+) ENGINE=InnoDB;
 
 --
--- Contenu de la table `example`
+-- Contenu de la table `level_0`
 --
 
-INSERT INTO `example` (`id`, `name`) VALUES
-(1, 'Example 1'),
-(2, 'Example 2'),
-(3, 'Example 3'),
-(4, 'Example 4');
+INSERT INTO `level_0` (`x`, `y`, `type`) VALUES
+(0, 0, ' ');
 
 --
 -- Index pour les tables exportées
 --
 
 --
--- Index pour la table `example`
+-- Index pour la table `level_0`
 --
-ALTER TABLE `example`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `example`
---
-ALTER TABLE `example`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `level_0`
+  ADD PRIMARY KEY (`x`, `y`);
+  
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
