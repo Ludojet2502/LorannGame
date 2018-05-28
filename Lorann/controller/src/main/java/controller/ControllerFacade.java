@@ -3,7 +3,7 @@ package controller;
 import java.sql.SQLException;
 import java.util.List;
 
-import model.Example;
+import model.Element;
 import model.IModel;
 import view.IView;
 
@@ -42,14 +42,14 @@ public class ControllerFacade implements IController {
      *             the SQL exception
      */
     public void start() throws SQLException {
-        this.getView().displayMessage(this.getModel().getExampleById(1).toString());
+        this.getView().displayMessage(this.getModel().getElementByPos(1, 1).toString());
 
-        this.getView().displayMessage(this.getModel().getExampleByName("Example 2").toString());
+        this.getView().displayMessage(this.getModel().getElementByType(' ').toString());
 
-        final List<Example> examples = this.getModel().getAllExamples();
+        final List<Element> Elements = this.getModel().getAllElements();
         final StringBuilder message = new StringBuilder();
-        for (final Example example : examples) {
-            message.append(example);
+        for (final Element Element : Elements) {
+            message.append(Element);
             message.append('\n');
         }
         this.getView().displayMessage(message.toString());
