@@ -12,33 +12,35 @@ import java.util.List;
 public interface IModel {
 
     /**
-     * Gets the example by id.
+     * Gets the Element by position.
      *
-     * @param id
-     *            the id
-     * @return the example by id
+     * @param x
+     *            the X position
+     * @param y
+     *            the Y position
+     * @return the Element by position
      * @throws SQLException
      *             the SQL exception
      */
-    Example getExampleById(int id) throws SQLException;
+    Element getElementByPos(int x, int y) throws SQLException;
 
     /**
-     * Gets the example by name.
+     * Gets the Element by type.
      *
-     * @param name
-     *            the name
-     * @return the example by name
+     * @param type
+     *            the type
+     * @return the Element by name
      * @throws SQLException
      *             the SQL exception
      */
-    Example getExampleByName(String name) throws SQLException;
+    Element getElementByType(char type) throws SQLException;
 
     /**
-     * Gets the all examples.
+     * Gets the all Elements.
      *
-     * @return the all examples
+     * @return the all Elements
      * @throws SQLException
      *             the SQL exception
      */
-    List<Example> getAllExamples() throws SQLException;
+    List<Element> getAllElements() throws SQLException;
 }

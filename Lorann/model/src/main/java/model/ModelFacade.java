@@ -3,7 +3,7 @@ package model;
 import java.sql.SQLException;
 import java.util.List;
 
-import model.dao.ExampleDAO;
+import model.dao.ElementDAO;
 
 /**
  * <h1>The Class ModelFacade provides a facade of the Model component.</h1>
@@ -22,29 +22,29 @@ public final class ModelFacade implements IModel {
 
     /*
      * (non-Javadoc)
-     * @see model.IModel#getExampleById(int)
+     * @see model.IModel#getElementById(int)
      */
     @Override
-    public Example getExampleById(final int id) throws SQLException {
-        return ExampleDAO.getExampleById(id);
+    public Element getElementByPos(final int x, final int y) throws SQLException {
+        return ElementDAO.getElementByPos(x, y);
     }
 
     /*
      * (non-Javadoc)
-     * @see model.IModel#getExampleByName(java.lang.String)
+     * @see model.IModel#getElementByName(java.lang.String)
      */
     @Override
-    public Example getExampleByName(final String name) throws SQLException {
-        return ExampleDAO.getExampleByName(name);
+    public Element getElementByType(final char type) throws SQLException {
+        return ElementDAO.getElementByType(type);
     }
 
     /*
      * (non-Javadoc)
-     * @see model.IModel#getAllExamples()
+     * @see model.IModel#getAllElements()
      */
     @Override
-    public List<Example> getAllExamples() throws SQLException {
-        return ExampleDAO.getAllExamples();
+    public List<Element> getAllElements() throws SQLException {
+        return ElementDAO.getAllElements();
     }
 
 }
