@@ -1,7 +1,7 @@
 package view;
 
 import javax.swing.JOptionPane;
-
+import model.IObject;
 /**
  * <h1>The Class ViewFacade provides a facade of the View component.</h1>
  *
@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  * @version 1.0
  */
 public class ViewFacade implements IView {
-
+	private model.Object[][] setObjet;
     /**
      * Instantiates a new view facade.
      */
@@ -17,6 +17,7 @@ public class ViewFacade implements IView {
         super();
     }
 
+    
     /*
      * (non-Javadoc)
      * @see view.IView#displayMessage(java.lang.String)

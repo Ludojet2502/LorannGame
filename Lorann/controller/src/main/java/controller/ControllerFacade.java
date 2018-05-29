@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 import model.Element;
 import model.IModel;
-import model.elements.Lorann;
+import model.Lorann;
 import view.IView;
 
 /**
