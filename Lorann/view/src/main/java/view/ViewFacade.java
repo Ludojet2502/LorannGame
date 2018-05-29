@@ -26,14 +26,6 @@ public class ViewFacade implements IView {
         super();
     }
 
-    private void loadBDD() throws SQLException {
-        for (int y = 0; y < 12; y++) {
-            for (int x = 0; x < 20; x++) {
-            	setObjects(ElementDAO.getElementByPos(x,y),x,y);
-            }
-        }
-    }
-    
     /*
      * (non-Javadoc)
      * @see view.IView#displayMessage(java.lang.String)
