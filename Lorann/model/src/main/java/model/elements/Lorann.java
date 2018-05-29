@@ -22,7 +22,6 @@ public abstract class Lorann extends Object implements ICharacter {
 
 	@Override
 	public void moveRight() {
-
 	}
 
 	@Override
