@@ -8,7 +8,7 @@ import model.graphics.Sprite;
  * @author Matthieu CARTERON matthieu.carteron@viacesi.fr
  * @version 1.0
  */
-public abstract class Lorann extends Object implements ICharacter {
+public abstract class Lorann extends Mobile implements ICharacter {
 	
 	/** The life state. */
 	private boolean alive;
@@ -19,26 +19,6 @@ public abstract class Lorann extends Object implements ICharacter {
 	public Lorann(int x, int y, final Sprite sprite) {
 		super(x, y, false, sprite);
 	}
-
-	@Override
-	public void moveRight() {
-		this.setX(getX()+1);
-	}
-
-	@Override
-	public void moveLeft() {
-		this.setX(getX()-1);
-	}
-
-	@Override
-	public void moveUp() {
-		this.setY(getY()+1);
-	}
-
-	@Override
-	public void moveDown() {
-		this.setY(getY()-1);
-	}
 	
 	@Override
 	public void attaque() {
@@ -47,6 +27,6 @@ public abstract class Lorann extends Object implements ICharacter {
 
 	@Override
 	public boolean isAlive() {
-		return true;
+		return this.alive;
 	}
 }
