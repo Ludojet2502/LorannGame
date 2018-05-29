@@ -7,5 +7,5 @@ package model.elements;
  * @version 1.0
  */
 public class SolHorizontal extends Object {
-
+ 
 }
