@@ -21,7 +21,7 @@ public class ControllerFacade implements IController {
     /** The model. */
     private final IModel model;
     
-    private Lorran Lorran;
+    private Lorann Lorran;
 
     /**
      * Instantiates a new controller facade.
@@ -60,21 +60,20 @@ public class ControllerFacade implements IController {
         	if (KeyCode.key != 0) {
         		switch (KeyCode.key) {
         		case 39:
-        			Lorran.moveRight();
+        			Lorann.moveRight();
         			break;
         		case 37:
-        			Lorran.moveLeft();
+        			Lorann.moveLeft();
         			break;
         		case 38:
-        			Lorran.moveUp();
+        			Lorann.moveUp();
         			break;
         		case 40:
-        			Lorran.moveDown();
+        			Lorann.moveDown();
         			break;
         		}
         	}
-        }
-        
+        }     
     }
 
     /**
