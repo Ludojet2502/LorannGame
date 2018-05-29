@@ -4,13 +4,12 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
-
-import fr.exia.insanevehicles.element.Element;
-import fr.exia.insanevehicles.element.motionless.MotionlessElementsFactory;
 import model.elements.IObject;
-import model.
+import model.dao.ElementDAO;
+
 /**
  * <h1>The Class ViewFacade provides a facade of the View component.</h1>
  *
@@ -27,10 +26,10 @@ public class ViewFacade implements IView {
         super();
     }
 
-    private void loadBDD() {
+    private void loadBDD() throws SQLException {
         for (int y = 0; y < 12; y++) {
             for (int x = 0; x < 20; x++) {
-            	getElementByPos(x,y);
+            	setObjects(ElementDAO.getElementByPos(x,y),x,y);
             }
         }
     }
