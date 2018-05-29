@@ -30,7 +30,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Structure de la table `level_0`
+-- Structure de la table `levels`
 --
 
 CREATE TABLE `levels` (
@@ -45,9 +45,9 @@ CREATE TABLE `levels` (
 --
 
 --
--- Index pour la table `level_0`
+-- Index pour la table `levels`
 --
-ALTER TABLE `level_0`
+ALTER TABLE `levels`
   ADD PRIMARY KEY (`x`, `y`, `level`);
   
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
