@@ -2,9 +2,9 @@ package controller;
 
 import java.sql.SQLException;
 import java.util.List;
+
 import model.Element;
 import model.IModel;
-import model.elements.Lorann;
 import view.IView;
 
 /**
@@ -21,8 +21,7 @@ public class ControllerFacade implements IController {
     /** The model. */
     private final IModel model;
     
-    /** The main character. */
-    private Lorann lorann;
+    private Lorran Lorran;
 
     /**
      * Instantiates a new controller facade.
@@ -36,7 +35,6 @@ public class ControllerFacade implements IController {
         super();
         this.view = view;
         this.model = model;
-        this.lorann = new Lorann();
     }
 
     /**
@@ -56,27 +54,22 @@ public class ControllerFacade implements IController {
             message.append(Element);
             message.append('\n');
         }
-        
-        // La boucle principale, continuant tant que le personnage est en vie :
-        while (this.lorann.IsAlive()) {
-        	
+        while (Lorann.alive) {
         	this.getView().displayMessage(message.toString());
-        	
-        	// Gestion des entrées utilisateur :
         	KeyCode.key=0;
         	if (KeyCode.key != 0) {
         		switch (KeyCode.key) {
         		case 39:
-        			this.lorann.moveRight();
+        			Lorran.moveRight();
         			break;
         		case 37:
-        			this.lorann.moveLeft();
+        			Lorran.moveLeft();
         			break;
         		case 38:
-        			this.lorann.moveUp();
+        			Lorran.moveUp();
         			break;
         		case 40:
-        			this.lorann.moveDown();
+        			Lorran.moveDown();
         			break;
         		}
         	}
