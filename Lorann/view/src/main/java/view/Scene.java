@@ -29,7 +29,7 @@ public class Scene {
 	private void loadBDD() throws SQLException {
 		for (int y = 0; y < 12; y++) {
 			for (int x = 0; x < 20; x++) {
-				setObjects(ElementDAO.getElementByPos(x,y),x,y);
+				setObjectXY(ElementDAO.getElementByPos(x,y),x,y);
 			}
 		}
 	}
@@ -96,7 +96,7 @@ public class Scene {
      *            the y
      */
     //remplire le tableau des element
-    public final void setObjectXy(final Object object, final int x, final int y) {
+    public final void setObjectXY(final Object object, final int x, final int y) {
         this.Objects[x][y] = object;
     }
 }
