@@ -1,5 +1,6 @@
 package model.elements;
 
+import model.Scene;
 import model.graphics.Sprite;
 
 /**
@@ -8,7 +9,7 @@ import model.graphics.Sprite;
  * @author Matthieu CARTERON matthieu.carteron@viacesi.fr
  * @version 1.0
  */
-public class Lorann extends Object implements ICharacter {
+public abstract class Lorann extends Object implements ICharacter {
 	
 	/** The life state. */
 	private boolean alive;
@@ -22,7 +23,7 @@ public class Lorann extends Object implements ICharacter {
 
 	@Override
 	public void moveRight() {
-		// TODO Auto-generated method stub
+
 	}
 
 	@Override

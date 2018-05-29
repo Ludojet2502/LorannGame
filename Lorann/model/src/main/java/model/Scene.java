@@ -94,7 +94,7 @@ public class Scene {
      *            the Y position
      * @return the element at the position
      */
-    public final Object getObjectXY(int x, int y) {
+    public Object getObjectXY(int x, int y) {
         return this.object[x][y];
     }
 
@@ -108,7 +108,11 @@ public class Scene {
      * @param y
      *            the Y position
      */
-    public final void setObjectXY(final Object object, int x, int y) {
+    public void setObjectXY(final Object object, int x, int y) {
         this.object[x][y] = object;
+    }
+    
+    public Boolean isPenetrable (int x, int y) {
+    	return this.getObjectXY(x, y).getSolid();
     }
 }
