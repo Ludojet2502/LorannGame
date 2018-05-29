@@ -27,4 +27,9 @@ public interface IMobile {
      * Moves the mobile down by handling collision
      */
 	public void moveDown();
+
+	/**
+     * Lance l'attaque magique
+     */
+	void attaque();
 }

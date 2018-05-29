@@ -43,6 +43,11 @@ public abstract class Lorann extends Object implements ICharacter {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	@Override
+	public void attaque() {
+		
+	}
 
 	@Override
 	public boolean isAlive() {

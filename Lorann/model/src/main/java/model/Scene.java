@@ -112,7 +112,7 @@ public class Scene {
     public void setObjectXY(final Object object, int x, int y) {
         this.object[x][y] = object;
     }
-    
+
     /**
      * Test if an object is solid.
      *
