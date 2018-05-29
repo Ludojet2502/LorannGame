@@ -82,7 +82,7 @@ public class Sprite {
 	 * @throws IOException
      *
      */
-	static void LoadSprite() throws IOException {
+	static public void LoadSprite() throws IOException {
 		SPRITE_LORANN = new Sprite(0);
 		SPRITE_LORANN.appendImage(ImageIO.read(new File("sprites/lorann_r.png")));
 		SPRITE_LORANN.appendImage(ImageIO.read(new File("sprites/lorann_br.png")));

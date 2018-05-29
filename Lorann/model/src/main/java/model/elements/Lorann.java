@@ -1,6 +1,5 @@
 package model.elements;
 
-import model.Scene;
 import model.graphics.Sprite;
 
 /**
