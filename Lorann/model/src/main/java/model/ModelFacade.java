@@ -22,7 +22,7 @@ public final class ModelFacade implements IModel {
      */
     public ModelFacade() {
         super();
-        //this.character = new Lorann();
+        ///this.character = new Lorann();
         this.character = null;
     }
     
