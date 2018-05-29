@@ -1,5 +1,7 @@
 package model.elements;
 
+import model.graphics.Sprite;
+
 /**
  * <h1>The Class Mobile represents a solid vertical floor.</h1>
  *
@@ -8,4 +10,10 @@ package model.elements;
  */
 public class SolVertical extends Object {
 
+	/**
+     * Instantiates a new SolVertical.
+     */
+	public SolVertical(Sprite sprite) {
+		super(sprite);
+	}
 }

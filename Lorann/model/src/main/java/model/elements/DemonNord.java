@@ -1,5 +1,7 @@
 package model.elements;
 
+import model.graphics.Sprite;
+
 /**
  * <h1>The Class DemonNord represents a collectable item.</h1>
  *
@@ -8,4 +10,10 @@ package model.elements;
  */
 public class DemonNord extends Mobile {
 
+	/**
+     * Instantiates a new DemonNord.
+     */
+	public DemonNord(Sprite sprite) {
+		super(sprite);
+	}
 }

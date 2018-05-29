@@ -1,5 +1,7 @@
 package model.elements;
 
+import model.graphics.Sprite;
+
 /**
  * <h1>The Class Mobile represents a solid wall.</h1>
  *
@@ -8,4 +10,10 @@ package model.elements;
  */
 public class Mur extends Object {
 
+	/**
+     * Instantiates a new Mur.
+     */
+	public Mur(Sprite sprite) {
+		super(sprite);
+	}
 }

@@ -1,5 +1,7 @@
 package model.elements;
 
+import model.graphics.Sprite;
+
 /**
  * <h1>The Class Lorann represents the controllable character.</h1>
  *
@@ -8,4 +10,10 @@ package model.elements;
  */
 public class Lorann extends Mobile {
 	
+	/**
+     * Instantiates a new Lorann.
+     */
+	public Lorann(Sprite sprite) {
+		super(sprite);
+	}
 }

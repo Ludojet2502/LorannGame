@@ -1,5 +1,7 @@
 package model.elements;
 
+import model.graphics.Sprite;
+
 /**
  * <h1>The Class Mobile represents the level's end.</h1>
  *
@@ -8,4 +10,10 @@ package model.elements;
  */
 public class Sortie extends Object {
 
+	/**
+     * Instantiates a new Sortie.
+     */
+	public Sortie(Sprite sprite) {
+		super(sprite);
+	}
 }

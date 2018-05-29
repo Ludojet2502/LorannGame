@@ -1,5 +1,7 @@
 package model.elements;
 
+import model.graphics.Sprite;
+
 /**
  * <h1>The Class Bulle represents a collectable item.</h1>
  *
@@ -8,4 +10,10 @@ package model.elements;
  */
 public class Bulle extends Object {
 
+	/**
+     * Instantiates a new Bulle.
+     */
+	public Bulle(Sprite sprite) {
+		super(sprite);
+	}
 }

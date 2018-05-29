@@ -1,5 +1,7 @@
 package model.elements;
 
+import model.graphics.Sprite;
+
 /**
  * <h1>The Class Object represents a placeable object.</h1>
  *
@@ -13,6 +15,22 @@ public class Object {
 	
 	/** The Y position. */
 	int y;
+	
+	/** The solidity. */
+	boolean solid;
+	
+	/** The sprite. */
+	Sprite sprite;
+	
+	/**
+     * Instantiates a new Object.
+     *
+     * @param sprite
+     *            the sprite
+     */
+	public Object(Sprite sprite) {
+		this.sprite = sprite;
+	}
 	
 	/**
      * Gets the X position.
@@ -50,5 +68,24 @@ public class Object {
      */
 	public void setY(int y) {
 		this.y = y;
+	}
+	
+	/**
+     * Gets the solidity.
+     *
+     * @return the solidity
+     */
+	public boolean getSolid() {
+		return solid;
+	}
+	
+	/**
+     * Sets the solidity.
+     *
+     * @param solid
+     *            the solidity
+     */
+	public void setSolid(boolean solid) {
+		this.solid = solid;
 	}
 }
