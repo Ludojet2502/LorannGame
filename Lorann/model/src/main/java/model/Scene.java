@@ -39,7 +39,7 @@ public class Scene {
      * 
      * @throws SQLException
      */
-	private void loadLevel(int level) throws SQLException {
+	private void loadLevel(final int level) throws SQLException {
 		for (int y = 0; y < 12; y++) {
 			for (int x = 0; x < 20; x++) {
 				setObjectXY(ElementDAO.getElementByPos(level, x, y), x, y);
