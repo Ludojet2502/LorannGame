@@ -19,25 +19,21 @@ public class Sortilege extends Object implements IMobile {
 
 	@Override
 	public void moveRight() {
-		// TODO Auto-generated method stub
-		
+		this.setX(getX()+1);
 	}
 
 	@Override
 	public void moveLeft() {
-		// TODO Auto-generated method stub
-		
+		this.setX(getX()-1);
 	}
 
 	@Override
 	public void moveUp() {
-		// TODO Auto-generated method stub
-		
+		this.setY(getY()+1);
 	}
 
 	@Override
 	public void moveDown() {
-		// TODO Auto-generated method stub
-		
+		this.setY(getY()-1);
 	}
 }

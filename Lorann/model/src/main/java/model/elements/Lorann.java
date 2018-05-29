@@ -22,24 +22,22 @@ public abstract class Lorann extends Object implements ICharacter {
 
 	@Override
 	public void moveRight() {
+		this.setX(getX()+1);
 	}
 
 	@Override
 	public void moveLeft() {
-		// TODO Auto-generated method stub
-		
+		this.setX(getX()-1);
 	}
 
 	@Override
 	public void moveUp() {
-		// TODO Auto-generated method stub
-		
+		this.setY(getY()+1);
 	}
 
 	@Override
 	public void moveDown() {
-		// TODO Auto-generated method stub
-		
+		this.setY(getY()-1);
 	}
 	
 	@Override
@@ -49,7 +47,6 @@ public abstract class Lorann extends Object implements ICharacter {
 
 	@Override
 	public boolean isAlive() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 }
