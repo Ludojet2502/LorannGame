@@ -4,11 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 import model.Element;
 import model.IModel;
-<<<<<<< HEAD
-import model.Lorann;
-=======
 import model.elements.ICharacter;
->>>>>>> branch 'Save-Branch' of https://github.com/HugoLeBoennec/LorannGame/
 import view.IView;
 
 /**

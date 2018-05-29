@@ -19,9 +19,6 @@ public abstract class ElementDAO extends AbstractDAO {
     /** The sql Element by id. */
     private static String sqlElementByPos  = "{call findElementByPos(?, ?)}";
 
-    /** The sql Element by type. */
-    private static String sqlElementByType = "{call findElementByType(?)}";
-
     /** The sql all Elements. */
     private static String sqlAllElements   = "{call findAllElements()}";
 
@@ -50,29 +47,6 @@ public abstract class ElementDAO extends AbstractDAO {
         Element Element = null;
         callStatement.setInt(1, x);
         callStatement.setInt(2, y);
-        if (callStatement.execute()) {
-            final ResultSet result = callStatement.getResultSet();
-            if (result.first()) {
-                Element = new Element(result.getInt(xColumnIndex), result.getInt(yColumnIndex), result.getString(typeColumnIndex).charAt(0));
-            }
-            result.close();
-        }
-        return Element;
-    }
-
-    /**
-     * Gets the Element by type.
-     *
-     * @param type
-     *            the type
-     * @return the Element by type
-     * @throws SQLException
-     *             the SQL exception
-     */
-    public static Element getElementByType(final char type) throws SQLException {
-        final CallableStatement callStatement = prepareCall(sqlElementByType);
-        Element Element = null;
-        callStatement.setString(1, Character.toString(type));
         if (callStatement.execute()) {
             final ResultSet result = callStatement.getResultSet();
             if (result.first()) {
