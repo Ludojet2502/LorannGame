@@ -4,6 +4,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 import model.dao.ElementDAO;
+import model.elements.ICharacter;
+import model.elements.Lorann;
 
 /**
  * <h1>The Class ModelFacade provides a facade of the Model component.</h1>
@@ -13,12 +15,22 @@ import model.dao.ElementDAO;
  */
 public final class ModelFacade implements IModel {
 
+    /** The main character. */
+    private final ICharacter character;
+    
     /**
      * Instantiates a new model facade.
      */
     public ModelFacade() {
         super();
+        //this.character = new Lorann();
+        this.character = null;
     }
+    
+    @Override
+	public ICharacter getCharacter() {
+		return this.character;
+	}
 
     /*
      * (non-Javadoc)
@@ -37,5 +49,4 @@ public final class ModelFacade implements IModel {
     public List<Element> getAllElements() throws SQLException {
         return ElementDAO.getAllElements();
     }
-
 }

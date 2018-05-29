@@ -20,9 +20,6 @@ public class ControllerFacade implements IController {
 
     /** The model. */
     private final IModel model;
-    
-    /** The main character. */
-    private final ICharacter character;
 
     /**
      * Instantiates a new controller facade.

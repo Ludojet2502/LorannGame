@@ -3,6 +3,8 @@ package model;
 import java.sql.SQLException;
 import java.util.List;
 
+import model.elements.ICharacter;
+
 /**
  * <h1>The Interface IModel.</h1>
  *
@@ -12,6 +14,13 @@ import java.util.List;
 public interface IModel {
 
     /**
+     * Gets the main character.
+     *
+     * @return the main character
+     */
+	ICharacter getCharacter();
+	
+	/**
      * Gets the Element by position.
      *
      * @param x
