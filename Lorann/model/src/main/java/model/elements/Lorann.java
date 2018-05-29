@@ -8,7 +8,10 @@ import model.graphics.Sprite;
  * @author Matthieu CARTERON matthieu.carteron@viacesi.fr
  * @version 1.0
  */
-public class Lorann extends Object implements IMobile {
+public class Lorann extends Object implements ICharacter {
+	
+	/** The life state. */
+	private boolean alive;
 	
 	/**
      * Instantiates a new Lorann.
@@ -39,5 +42,11 @@ public class Lorann extends Object implements IMobile {
 	public void moveDown() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public boolean isAlive() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }
