@@ -7,7 +7,7 @@ package model.elements;
  * @version 1.0
  */
 public class Mobile extends Object {
-	 
+	 //
 	/**
      * Moves the mobile right by handling collision
      */
