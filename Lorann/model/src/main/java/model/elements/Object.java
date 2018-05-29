@@ -11,16 +11,16 @@ import model.graphics.Sprite;
 public class Object {
 	
 	/** The X position. */
-	int x;
+	private int x;
 	
 	/** The Y position. */
-	int y;
+	private int y;
 	
 	/** The solidity. */
-	boolean solid;
+	private boolean solid;
 	
 	/** The sprite. */
-	Sprite sprite;
+	private Sprite sprite;
 	
 	/**
      * Instantiates a new Object.
