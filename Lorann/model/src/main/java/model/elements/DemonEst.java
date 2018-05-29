@@ -8,7 +8,7 @@ import model.graphics.Sprite;
  * @author Matthieu CARTERON matthieu.carteron@viacesi.fr
  * @version 1.0
  */
-public class DemonEst extends Mobile {
+public class DemonEst extends Object implements IMobile {
 	
 	/**
      * Instantiates a new DemonEst.

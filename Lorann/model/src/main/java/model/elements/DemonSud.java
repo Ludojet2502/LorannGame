@@ -8,7 +8,7 @@ import model.graphics.Sprite;
  * @author Matthieu CARTERON matthieu.carteron@viacesi.fr
  * @version 1.0
  */
-public class DemonSud extends Mobile {
+public class DemonSud extends Object implements IMobile {
 
 	/**
      * Instantiates a new DemonSud.
