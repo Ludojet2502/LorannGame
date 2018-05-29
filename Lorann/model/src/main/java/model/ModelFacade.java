@@ -31,15 +31,6 @@ public final class ModelFacade implements IModel {
 
     /*
      * (non-Javadoc)
-     * @see model.IModel#getElementByName(java.lang.String)
-     */
-    @Override
-    public Element getElementByType(final char type) throws SQLException {
-        return ElementDAO.getElementByType(type);
-    }
-
-    /*
-     * (non-Javadoc)
      * @see model.IModel#getAllElements()
      */
     @Override

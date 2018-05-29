@@ -25,17 +25,6 @@ public interface IModel {
     Element getElementByPos(int x, int y) throws SQLException;
 
     /**
-     * Gets the Element by type.
-     *
-     * @param type
-     *            the type
-     * @return the Element by name
-     * @throws SQLException
-     *             the SQL exception
-     */
-    Element getElementByType(char type) throws SQLException;
-
-    /**
      * Gets the all Elements.
      *
      * @return the all Elements
