@@ -1,10 +1,12 @@
 package model;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
 import model.dao.ElementDAO;
 import model.elements.ICharacter;
+import model.graphics.Sprite;
 
 /**
  * <h1>The Class ModelFacade provides a facade of the Model component.</h1>
@@ -19,9 +21,14 @@ public final class ModelFacade implements IModel {
     
     /**
      * Instantiates a new model facade.
+     * @throws IOException 
      */
-    public ModelFacade() {
+    public ModelFacade() throws IOException {
         super();
+        
+        // Chargement des sprites :
+    	Sprite.LoadSprite();
+    	
         ///this.character = new Lorann();
         this.character = null;
     }
