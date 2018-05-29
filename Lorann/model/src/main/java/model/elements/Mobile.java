@@ -2,6 +2,7 @@ package model.elements;
 
 public class Mobile implements IMobile {
 	
+	
 	@Override
 	public void moveRight() {
 		this.setX(getX()+1);
