@@ -13,7 +13,7 @@ public class Mur extends Object {
 	/**
      * Instantiates a new Mur.
      */
-	public Mur(Sprite sprite) {
-		super(sprite);
+	public Mur(int x, int y, final Sprite sprite) {
+		super(x, y, true, sprite);
 	}
 }

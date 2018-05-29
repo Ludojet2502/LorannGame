@@ -3,34 +3,37 @@ package model.elements;
 import model.graphics.Sprite;
 
 /**
- * <h1>The Class Object represents a placeable object.</h1>
+ * <h1>The Interface Object implements placeable object.</h1>
  *
  * @author Matthieu CARTERON matthieu.carteron@viacesi.fr
  * @version 1.0
  */
-public class Object {
+public abstract class Object implements IObject {
 	
 	/** The X position. */
-	int x;
+	public int x;
 	
 	/** The Y position. */
-	int y;
+	public int y;
 	
 	/** The solidity. */
-	boolean solid;
+	public boolean solid;
 	
 	/** The sprite. */
-	Sprite sprite;
+	public Sprite sprite;
 	
 	/**
-     * Instantiates a new Object.
+     * Instantiates a new object.
      *
      * @param sprite
      *            the sprite
      */
-	public Object(Sprite sprite) {
-		this.sprite = sprite;
-	}
+    public Object(int x, int y, boolean solid, final Sprite sprite) {
+    	this.x = x;
+    	this.x = y;
+    	this.solid = solid;
+        this.sprite = sprite;
+    }
 	
 	/**
      * Gets the X position.
@@ -38,7 +41,7 @@ public class Object {
      * @return the X position
      */
 	public int getX() {
-		return x;
+		return this.x;
 	}
 	
 	/**
@@ -57,7 +60,7 @@ public class Object {
      * @return the Y position
      */
 	public int getY() {
-		return y;
+		return this.y;
 	}
 	
 	/**
@@ -76,7 +79,7 @@ public class Object {
      * @return the solidity
      */
 	public boolean getSolid() {
-		return solid;
+		return this.solid;
 	}
 	
 	/**

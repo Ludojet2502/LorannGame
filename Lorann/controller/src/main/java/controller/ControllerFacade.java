@@ -4,7 +4,11 @@ import java.sql.SQLException;
 import java.util.List;
 import model.Element;
 import model.IModel;
+<<<<<<< HEAD
 import model.Lorann;
+=======
+import model.elements.ICharacter;
+>>>>>>> branch 'Save-Branch' of https://github.com/HugoLeBoennec/LorannGame/
 import view.IView;
 
 /**
@@ -22,7 +26,7 @@ public class ControllerFacade implements IController {
     private final IModel model;
     
     /** The main character. */
-    private Lorann lorann;
+    private final ICharacter character;
 
     /**
      * Instantiates a new controller facade.
@@ -36,7 +40,8 @@ public class ControllerFacade implements IController {
         super();
         this.view = view;
         this.model = model;
-        this.lorann = new Lorann();
+        this.character = null;
+        //this.character = new Lorann();
     }
 
     /**
@@ -58,7 +63,7 @@ public class ControllerFacade implements IController {
         }
         
         // La boucle principale, continuant tant que le personnage est en vie :
-        while (this.lorann.IsAlive()) {
+        while (this.character.isAlive()) {
         	
         	this.getView().displayMessage(message.toString());
         	
@@ -67,16 +72,16 @@ public class ControllerFacade implements IController {
         	if (KeyCode.key != 0) {
         		switch (KeyCode.key) {
         		case 39:
-        			this.lorann.moveRight();
+        			this.character.moveRight();
         			break;
         		case 37:
-        			this.lorann.moveLeft();
+        			this.character.moveLeft();
         			break;
         		case 38:
-        			this.lorann.moveUp();
+        			this.character.moveUp();
         			break;
         		case 40:
-        			this.lorann.moveDown();
+        			this.character.moveDown();
         			break;
         		}
         	}

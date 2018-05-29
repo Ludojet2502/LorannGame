@@ -13,7 +13,7 @@ public class Bourse extends Object {
 	/**
      * Instantiates a new Bourse.
      */
-	public Bourse(Sprite sprite) {
-		super(sprite);
+	public Bourse(int x, int y, final Sprite sprite) {
+		super(x, y, false, sprite);
 	}
 }

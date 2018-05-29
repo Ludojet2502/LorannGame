@@ -8,12 +8,12 @@ import model.graphics.Sprite;
  * @author Matthieu CARTERON matthieu.carteron@viacesi.fr
  * @version 1.0
  */
-public class DemonSud extends Mobile {
+public abstract class DemonSud extends Object implements IMobile {
 
 	/**
      * Instantiates a new DemonSud.
      */
-	public DemonSud(Sprite sprite) {
-		super(sprite);
+	public DemonSud(int x, int y, final Sprite sprite) {
+		super(x, y, false, sprite);
 	}
 }
