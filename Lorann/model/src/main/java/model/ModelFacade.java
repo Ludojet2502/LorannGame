@@ -5,7 +5,6 @@ import java.util.List;
 
 import model.dao.ElementDAO;
 import model.elements.ICharacter;
-import model.elements.Lorann;
 
 /**
  * <h1>The Class ModelFacade provides a facade of the Model component.</h1>
