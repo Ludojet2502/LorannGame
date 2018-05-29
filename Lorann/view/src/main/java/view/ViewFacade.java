@@ -1,9 +1,16 @@
 package view;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 import javax.swing.JOptionPane;
 
 import fr.exia.insanevehicles.element.Element;
+import fr.exia.insanevehicles.element.motionless.MotionlessElementsFactory;
 import model.elements.IObject;
+import model.
 /**
  * <h1>The Class ViewFacade provides a facade of the View component.</h1>
  *
@@ -20,6 +27,17 @@ public class ViewFacade implements IView {
         super();
     }
 
+    private void loadBDD() {
+        for (int y = 0; y < 12; y++) {
+            for (int x = 0; x < 20; x++) {
+            	getElementByPos(x,y);
+            }
+            line = sbuffer.readLine();
+            y++;
+        }
+        sbuffer.close();
+        setHauteur(y);
+    }
     
     /*
      * (non-Javadoc)
