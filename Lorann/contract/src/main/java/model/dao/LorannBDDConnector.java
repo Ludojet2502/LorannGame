@@ -106,7 +106,7 @@ final class LorannBDDConnector {
      *
      * @param query
      *            the query
-     * @return the java.sql. callable statement
+     * @return the java.sql callable statement
      */
     public java.sql.CallableStatement prepareCall(final String query) {
         try {
