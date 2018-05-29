@@ -33,8 +33,6 @@ public class ControllerFacade implements IController {
         super();
         this.view = view;
         this.model = model;
-        this.character = null;
-        //this.character = new Lorann();
     }
 
     /**
@@ -53,8 +51,10 @@ public class ControllerFacade implements IController {
             message.append('\n');
         }
         
+        ICharacter character = this.model.getCharacter();
+        
         // La boucle principale, continuant tant que le personnage est en vie :
-        while (this.character.isAlive()) {
+        while (character.isAlive()) {
         	
         	this.getView().displayMessage(message.toString());
         	
@@ -63,16 +63,16 @@ public class ControllerFacade implements IController {
         	if (KeyCode.key != 0) {
         		switch (KeyCode.key) {
         		case 39:
-        			this.character.moveRight();
+        			character.moveRight();
         			break;
         		case 37:
-        			this.character.moveLeft();
+        			character.moveLeft();
         			break;
         		case 38:
-        			this.character.moveUp();
+        			character.moveUp();
         			break;
         		case 40:
-        			this.character.moveDown();
+        			character.moveDown();
         			break;
         		}
         	}
