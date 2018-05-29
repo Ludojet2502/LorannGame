@@ -5,6 +5,7 @@ import java.util.List;
 import model.Element;
 import model.IModel;
 import view.IView;
+import model.Lorran;
 
 /**
  * <h1>The Class ControllerFacade provides a facade of the Controller component.</h1>
@@ -20,7 +21,7 @@ public class ControllerFacade implements IController {
     /** The model. */
     private final IModel model;
     
-    private Lorann Lorran;
+    private Lorran Lorran;
 
     /**
      * Instantiates a new controller facade.
@@ -53,22 +54,22 @@ public class ControllerFacade implements IController {
             message.append(Element);
             message.append('\n');
         }
-        while (alive) {
+        while (Lorann.alive) {
         	this.getView().displayMessage(message.toString());
         	KeyCode.key=0;
         	if (KeyCode.key != 0) {
         		switch (KeyCode.key) {
         		case 39:
-        			Lorann.moveRight();
+        			Lorran.moveRight();
         			break;
         		case 37:
-        			Lorann.moveLeft();
+        			Lorran.moveLeft();
         			break;
         		case 38:
-        			Lorann.moveUp();
+        			Lorran.moveUp();
         			break;
         		case 40:
-        			Lorann.moveDown();
+        			Lorran.moveDown();
         			break;
         		}
         	}
