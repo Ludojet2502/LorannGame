@@ -49,8 +49,6 @@ public class ControllerFacade implements IController {
     public void start() throws SQLException {
         this.getView().displayMessage(this.getModel().getElementByPos(1, 1).toString());
 
-        this.getView().displayMessage(this.getModel().getElementByType('g').toString());
-
         final List<Element> Elements = this.getModel().getAllElements();
         final StringBuilder message = new StringBuilder();
         for (final Element Element : Elements) {
