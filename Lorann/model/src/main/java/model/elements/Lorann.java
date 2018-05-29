@@ -23,7 +23,6 @@ public class Lorann extends Object implements ICharacter {
 	@Override
 	public void moveRight() {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override

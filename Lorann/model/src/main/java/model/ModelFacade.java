@@ -35,17 +35,15 @@ public final class ModelFacade implements IModel {
      * (non-Javadoc)
      * @see model.IModel#getElementById(int)
      */
-    @Override
-    public Element getElementByPos(final int x, final int y) throws SQLException {
-        return ElementDAO.getElementByPos(x, y);
+    public Element getElementByPos(final int level, final int x, final int y) throws SQLException {
+        return ElementDAO.getElementByPos(level, x, y);
     }
 
     /*
      * (non-Javadoc)
      * @see model.IModel#getAllElements()
      */
-    @Override
-    public List<Element> getAllElements() throws SQLException {
-        return ElementDAO.getAllElements();
+    public List<Element> getAllElements(int level) throws SQLException {
+        return ElementDAO.getAllElements(level);
     }
 }
