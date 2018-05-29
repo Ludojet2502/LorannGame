@@ -32,11 +32,7 @@ public class ViewFacade implements IView {
             for (int x = 0; x < 20; x++) {
             	getElementByPos(x,y);
             }
-            line = sbuffer.readLine();
-            y++;
         }
-        sbuffer.close();
-        setHauteur(y);
     }
     
     /*
