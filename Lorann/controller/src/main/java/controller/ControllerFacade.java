@@ -4,8 +4,8 @@ import java.sql.SQLException;
 import java.util.List;
 import model.Element;
 import model.IModel;
-import view.IView;
 import model.Lorran;
+import view.IView;
 
 /**
  * <h1>The Class ControllerFacade provides a facade of the Controller component.</h1>
@@ -21,7 +21,7 @@ public class ControllerFacade implements IController {
     /** The model. */
     private final IModel model;
     
-    private Lorran Lorran;
+    private Lorran lorann;
 
     /**
      * Instantiates a new controller facade.

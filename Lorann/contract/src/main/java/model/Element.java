@@ -1,7 +1,5 @@
 package model;
 
-import java.sql.SQLException;
-
 /**
  * <h1>The Class Example.</h1>
  *
@@ -10,8 +8,10 @@ import java.sql.SQLException;
  */
 public class Element {
 
-    /** The position. */
+    /** The X position. */
 	private final int x;
+	
+	/** The Y position. */
     private final int y;
 
     /** The type. */
