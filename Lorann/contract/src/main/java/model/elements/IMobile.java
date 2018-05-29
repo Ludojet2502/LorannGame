@@ -32,4 +32,5 @@ public interface IMobile {
      * Lance l'attaque magique
      */
 	void attaque();
+	
 }
