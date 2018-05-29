@@ -1,5 +1,7 @@
 package model.elements;
 
+import model.graphics.Sprite;
+
 /**
  * <h1>The Class Mobile represents a movable object.</h1>
  *
@@ -7,7 +9,17 @@ package model.elements;
  * @version 1.0
  */
 public class Mobile extends Object {
-	 //
+	
+	/**
+     * Instantiates a new Mobile.
+     *
+     * @param sprite
+     *            the sprite
+     */
+	public Mobile(Sprite sprite) {
+		super(sprite);
+	}
+	
 	/**
      * Moves the mobile right by handling collision
      */
