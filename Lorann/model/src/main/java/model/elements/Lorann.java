@@ -8,12 +8,36 @@ import model.graphics.Sprite;
  * @author Matthieu CARTERON matthieu.carteron@viacesi.fr
  * @version 1.0
  */
-public class Lorann extends Mobile {
+public class Lorann extends Object implements IMobile {
 	
 	/**
      * Instantiates a new Lorann.
      */
-	public Lorann(Sprite sprite) {
-		super(sprite);
+	public Lorann(int x, int y, final Sprite sprite) {
+		super(x, y, false, sprite);
+	}
+
+	@Override
+	public void moveRight() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void moveLeft() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void moveUp() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void moveDown() {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -8,12 +8,36 @@ import model.graphics.Sprite;
  * @author Matthieu CARTERON matthieu.carteron@viacesi.fr
  * @version 1.0
  */
-public class Sortilege extends Mobile {
+public class Sortilege extends Object implements IMobile {
 	
 	/**
      * Instantiates a new Sortilege.
      */
-	public Sortilege(Sprite sprite) {
-		super(sprite);
+	public Sortilege(int x, int y, final Sprite sprite) {
+		super(x, y, false, sprite);
+	}
+
+	@Override
+	public void moveRight() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void moveLeft() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void moveUp() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void moveDown() {
+		// TODO Auto-generated method stub
+		
 	}
 }
