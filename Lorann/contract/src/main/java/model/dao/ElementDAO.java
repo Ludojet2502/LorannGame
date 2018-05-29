@@ -34,6 +34,8 @@ public abstract class ElementDAO extends AbstractDAO {
     /**
      * Gets the Element by position.
      *
+     * @param level
+     *            the level to load
      * @param x
      *            the X position
      * @param y
@@ -42,11 +44,12 @@ public abstract class ElementDAO extends AbstractDAO {
      * @throws SQLException
      *             the SQL exception 
      */
-    public static Element getElementByPos(final int x, final int y) throws SQLException {
+    public static Element getElementByPos(final int level, final int x, final int y) throws SQLException {
         final CallableStatement callStatement = prepareCall(sqlElementByPos);
         Element Element = null;
-        callStatement.setInt(1, x);
-        callStatement.setInt(2, y);
+        callStatement.setInt(1, level);
+        callStatement.setInt(2, x);
+        callStatement.setInt(3, y);
         if (callStatement.execute()) {
             final ResultSet result = callStatement.getResultSet();
             if (result.first()) {
@@ -60,13 +63,16 @@ public abstract class ElementDAO extends AbstractDAO {
     /**
      * Gets the all Elements.
      *
+     * @param level
+     *            the level to load
      * @return the all Elements
      * @throws SQLException
      *             the SQL exception
      */
-    public static List<Element> getAllElements() throws SQLException {
+    public static List<Element> getAllElements(final int level) throws SQLException {
         final ArrayList<Element> Elements = new ArrayList<Element>();
         final CallableStatement callStatement = prepareCall(sqlAllElements);
+        callStatement.setInt(1, level);
         if (callStatement.execute()) {
             final ResultSet result = callStatement.getResultSet();
 
