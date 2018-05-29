@@ -3,6 +3,7 @@ package model;
 import java.sql.SQLException;
 
 import model.dao.ElementDAO;
+import model.elements.Object;
 
 /**
  * <h1>The Class Scene represents the game scene with its elements.</h1>
@@ -42,7 +43,7 @@ public class Scene {
 	private void loadLevel(final int level) throws SQLException {
 		for (int y = 0; y < 12; y++) {
 			for (int x = 0; x < 20; x++) {
-				setObjectXY(ElementDAO.getElementByPos(level, x, y), x, y);
+				//setObjectXY(ElementDAO.getElementByPos(level, x, y), x, y);
 			}
 		}
 	}
@@ -112,7 +113,16 @@ public class Scene {
         this.object[x][y] = object;
     }
     
-    public Boolean isPenetrable (int x, int y) {
-    	return this.getObjectXY(x, y).getSolid();
+    /**
+     * Test if an object is solid.
+     *
+     * @param x
+     *            the X position
+     * @param y
+     *            the Y position
+     * @return the solidity at the position
+     */
+    public boolean isPenetrable (int x, int y) {
+    	return this.object[x][y].getSolidity();
     }
 }

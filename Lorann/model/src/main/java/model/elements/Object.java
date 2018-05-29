@@ -17,7 +17,7 @@ public abstract class Object implements IObject {
 	public int y;
 	
 	/** The solidity. */
-	public Boolean solid;
+	public boolean solid;
 	
 	/** The sprite. */
 	public Sprite sprite;
@@ -78,7 +78,7 @@ public abstract class Object implements IObject {
      *
      * @return the solidity
      */
-	public Boolean getSolid() {
+	public boolean getSolidity() {
 		return this.solid;
 	}
 	
@@ -88,7 +88,7 @@ public abstract class Object implements IObject {
      * @param solid
      *            the solidity
      */
-	public void setSolid(Boolean solid) {
+	public void setSolidity(boolean solid) {
 		this.solid = solid;
 	}
 }
