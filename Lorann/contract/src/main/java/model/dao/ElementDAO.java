@@ -40,7 +40,7 @@ public abstract class ElementDAO extends AbstractDAO {
      *            the Y position
      * @return the Element by position
      * @throws SQLException
-     *             the SQL exception
+     *             the SQL exception 
      */
     public static Element getElementByPos(final int x, final int y) throws SQLException {
         final CallableStatement callStatement = prepareCall(sqlElementByPos);
